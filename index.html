@@ -1,0 +1,1574 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cedar & Wolf is a brand identity and digital design studio creating thoughtful visual identities, editorial websites and digital brand systems for beauty, wellness, lifestyle, hospitality and creative businesses."
+    />
+    <title>Cedar &amp; Wolf | Brand Identity &amp; Digital Design Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --rose: #c47d8a;
+        --rose-deep: #b96f7d;
+        --cream: #fff8ef;
+        --red: #b93420;
+        --red-deep: #8f2518;
+        --line: rgba(185, 111, 125, 0.28);
+        --sans: "Josefin Sans", "Gill Sans", "Helvetica Neue", Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        position: relative;
+        overflow-x: hidden;
+        margin: 0;
+        background: linear-gradient(180deg, #fff8ef 0%, #fff3ed 46%, #ffece9 100%);
+        color: var(--rose-deep);
+        font-family: var(--sans);
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.6;
+      }
+
+      body::before {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background: radial-gradient(circle at 12% 30%, rgba(196, 125, 138, 0.16), transparent 10rem),
+          radial-gradient(circle at 88% 64%, rgba(185, 52, 32, 0.08), transparent 12rem);
+        content: "";
+        pointer-events: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        min-height: 106px;
+        padding: 0 clamp(22px, 6vw, 78px) 18px;
+        border-bottom: 1px solid rgba(185, 111, 125, 0.24);
+        background: linear-gradient(180deg, rgba(196, 125, 138, 0.96) 0%, rgba(216, 167, 177, 0.94) 58%, rgba(255, 240, 235, 0.9) 100%);
+        box-shadow: 0 10px 24px rgba(185, 111, 125, 0.12);
+        backdrop-filter: blur(14px);
+        overflow: hidden;
+      }
+
+      .site-header::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 48px;
+        background:
+          radial-gradient(ellipse at 24px 31px, #fff8ef 0 6px, transparent 7px),
+          radial-gradient(ellipse at 34px 27px, #f4c3cc 0 7px, transparent 8px),
+          radial-gradient(ellipse at 42px 33px, #fff0eb 0 6px, transparent 7px),
+          radial-gradient(circle at 34px 31px, #edc35c 0 1.5px, transparent 2px),
+          radial-gradient(ellipse at 58px 35px, #7c8644 0 5px, transparent 6px),
+          radial-gradient(ellipse at 63px 34px, #7c8644 0 3px, transparent 4px),
+          linear-gradient(105deg, transparent 0 21px, #7c8644 22px 24px, transparent 25px 116px);
+        background-size: 132px 48px;
+        content: "";
+        opacity: 0.72;
+        pointer-events: none;
+        animation: floralDrift 34s linear infinite;
+      }
+
+      @keyframes floralDrift {
+        from {
+          background-position: 0 0;
+        }
+
+        to {
+          background-position: 112px 0;
+        }
+      }
+
+      .mini-logo {
+        position: relative;
+        z-index: 1;
+        color: var(--rose-deep);
+        font-family: var(--sans);
+        font-size: clamp(32px, 4vw, 48px);
+        font-weight: 600;
+        line-height: 1;
+      }
+
+      .top-nav {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: clamp(14px, 2.5vw, 30px);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .top-nav a {
+        border-bottom: 1px solid transparent;
+        padding-bottom: 3px;
+      }
+
+      .top-nav a:hover {
+        border-color: currentColor;
+      }
+
+      .hero {
+        display: grid;
+        min-height: auto;
+        place-items: center;
+        padding: clamp(18px, 3vw, 34px) clamp(22px, 6vw, 78px);
+        text-align: center;
+      }
+
+      .hero-inner {
+        width: min(100%, 1080px);
+      }
+
+      .hero-brand-logo {
+        width: min(100%, 500px);
+        height: auto;
+        margin: 0 auto clamp(12px, 2vw, 20px);
+        border-radius: clamp(20px, 4vw, 44px);
+        box-shadow: 0 0 42px rgba(189, 120, 133, 0.55);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: var(--sans);
+        font-weight: 600;
+      }
+
+      h1 {
+        width: min(100%, 760px);
+        margin: 0 auto clamp(12px, 1.9vw, 20px);
+        color: var(--rose-deep);
+        font-size: clamp(22px, 2.45vw, 33px);
+        letter-spacing: 0.04em;
+        line-height: 1.12;
+        text-transform: uppercase;
+      }
+
+      .hero-copy {
+        width: min(100%, 760px);
+        margin: 0 auto 16px;
+        font-size: clamp(15px, 1.45vw, 18px);
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 43px;
+        align-items: center;
+        justify-content: center;
+        min-width: 150px;
+        border: 1px solid var(--red);
+        background: var(--cream);
+        color: var(--red);
+        padding: 0 20px;
+        font-family: var(--sans);
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        transition: transform 320ms ease, background 320ms ease, color 320ms ease, border-color 320ms ease,
+          box-shadow 320ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-3px);
+        border-color: var(--red-deep);
+        background: rgba(185, 52, 32, 0.08);
+        color: var(--red-deep);
+        box-shadow: 0 12px 30px rgba(143, 37, 24, 0.14);
+      }
+
+      .reveal,
+      .stagger {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity 900ms ease, transform 900ms ease, filter 420ms ease, border-color 420ms ease,
+          box-shadow 420ms ease, background 420ms ease;
+      }
+
+      .reveal.is-visible,
+      .stagger.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .studio-ticker {
+        overflow: hidden;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: rgba(196, 125, 138, 0.08);
+      }
+
+      .ticker-track {
+        display: flex;
+        width: max-content;
+        animation: tickerMove 28s linear infinite;
+      }
+
+      .ticker-track span {
+        padding: 13px 24px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      @keyframes tickerMove {
+        from {
+          transform: translateX(0);
+        }
+
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      .section-shell {
+        width: min(100%, 1240px);
+        margin: 0 auto;
+        padding: clamp(30px, 4vw, 52px) clamp(22px, 6vw, 78px);
+      }
+
+      .portfolio,
+      .contact {
+        border-top: 1px solid var(--line);
+      }
+
+      .portfolio-head {
+        display: grid;
+        justify-items: center;
+        gap: 10px;
+        margin-bottom: clamp(20px, 3.4vw, 36px);
+        text-align: center;
+      }
+
+      .portfolio-head > div {
+        max-width: 900px;
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin-bottom: 8px;
+        font-size: clamp(19px, 2.1vw, 27px);
+        line-height: 1.2;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      #work-title,
+      #branding h2,
+      #services-title,
+      #contact-title {
+        color: var(--rose-deep);
+      }
+
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .portfolio-grid + .portfolio-head {
+        margin-top: clamp(48px, 6.5vw, 84px);
+      }
+
+      .work-card {
+        display: grid;
+        gap: 10px;
+        transition: transform 420ms ease, filter 420ms ease;
+      }
+
+      .work-card:hover,
+      .work-project:hover {
+        transform: translateY(-6px);
+        filter: drop-shadow(0 18px 32px rgba(143, 37, 24, 0.12));
+      }
+
+      .work-project {
+        display: grid;
+        grid-column: span 2;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        align-items: stretch;
+        transition: transform 420ms ease, filter 420ms ease;
+      }
+
+      .work-project .brand-card img {
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        object-fit: cover;
+      }
+
+      .work-project .preview-frame {
+        aspect-ratio: 1;
+        overflow: hidden;
+      }
+
+      .work-project .preview-frame::before {
+        display: none;
+      }
+
+      .work-project .preview-frame iframe {
+        width: 320%;
+        height: 320%;
+        transform: scale(0.3125);
+      }
+
+      .work-project .work-meta {
+        grid-column: 1 / -1;
+      }
+
+      .preview-frame {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 16 / 10;
+        border: 1px solid var(--line);
+        background: rgba(196, 125, 138, 0.12);
+        overscroll-behavior: contain;
+      }
+
+      .preview-frame::after {
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        background: linear-gradient(180deg, rgba(255, 248, 239, 0), rgba(185, 52, 32, 0.14));
+        content: "";
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 420ms ease;
+      }
+
+      .work-card:hover .preview-frame::after,
+      .work-project:hover .preview-frame::after {
+        opacity: 1;
+      }
+
+      .preview-frame::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        height: 32px;
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 248, 239, 0.58);
+        content: "";
+        pointer-events: none;
+      }
+
+      .preview-frame iframe {
+        width: 1440px;
+        height: 980px;
+        border: 0;
+        background: var(--cream);
+        pointer-events: none;
+        transform: scale(0.39);
+        transform-origin: top left;
+      }
+
+      .work-card:hover .preview-frame iframe,
+      .work-project:hover .preview-frame iframe {
+        pointer-events: auto;
+      }
+
+      .work-meta {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .branding-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .brand-project {
+        display: grid;
+        grid-column: span 2;
+        gap: 10px;
+        border: 1px solid rgba(255, 248, 239, 0.34);
+        background: rgba(196, 125, 138, 0.055);
+        padding: clamp(10px, 1.2vw, 14px);
+        transition: border-color 420ms ease, box-shadow 420ms ease, transform 420ms ease;
+      }
+
+      .brand-project:hover {
+        border-color: rgba(255, 248, 239, 0.72);
+        box-shadow: 0 18px 38px rgba(143, 37, 24, 0.14);
+        transform: translateY(-4px);
+      }
+
+      .brand-project-title {
+        color: var(--rose-deep);
+        font-family: var(--sans);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        line-height: 1.35;
+        text-transform: uppercase;
+      }
+
+      .brand-pair {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .brand-card {
+        position: relative;
+        overflow: hidden;
+        border: 0;
+        background: transparent;
+        transition: transform 420ms ease, border-color 420ms ease, box-shadow 420ms ease;
+      }
+
+      .brand-card img,
+      .brand-card video {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        transition: transform 700ms ease;
+      }
+
+      .brand-card::before {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: rgba(62, 31, 35, 0.16);
+        content: "";
+        opacity: 0;
+        transition: opacity 420ms ease;
+      }
+
+      .brand-card::after {
+        position: absolute;
+        right: 18px;
+        bottom: 16px;
+        z-index: 2;
+        color: var(--cream);
+        content: attr(data-label);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        opacity: 0;
+        text-transform: uppercase;
+        transform: translateY(8px);
+        transition: opacity 420ms ease, transform 420ms ease;
+      }
+
+      .brand-card:hover {
+        box-shadow: 0 18px 38px rgba(255, 248, 239, 0.08);
+        transform: translateY(-4px);
+      }
+
+      .brand-card:hover img,
+      .brand-card:hover video {
+        transform: scale(1.035);
+      }
+
+      .brand-card.crop-tight img {
+        object-position: center;
+        transform: scale(1.22);
+      }
+
+      .brand-card.crop-tight:hover img {
+        transform: scale(1.27);
+      }
+
+      .brand-card.full-art img {
+        object-fit: contain;
+        background: transparent;
+      }
+
+      .brand-card.full-art:hover img {
+        transform: scale(1.02);
+      }
+
+      .brand-card.identity-board {
+        background: transparent;
+      }
+
+      .brand-card.identity-board img {
+        aspect-ratio: 3 / 4;
+        object-fit: contain;
+        padding: clamp(10px, 1.4vw, 18px);
+      }
+
+      .brand-card.identity-board:hover img {
+        transform: scale(1.018);
+      }
+
+      .brand-card.moodboard-crop img {
+        aspect-ratio: 1;
+        object-fit: cover;
+        object-position: 50% 8%;
+        padding: 0;
+        transform: scale(1.16);
+      }
+
+      .brand-card.moodboard-crop:hover img {
+        transform: scale(1.2);
+      }
+
+      .brand-card.brew-crop img {
+        object-position: center;
+        transform: scale(1.18);
+      }
+
+      .brand-card.sippy-crop img {
+        object-position: center;
+        transform: scale(1.28);
+      }
+
+      .brand-card.brew-crop:hover img {
+        transform: scale(1.22);
+      }
+
+      .brand-card.sippy-crop:hover img {
+        transform: scale(1.33);
+      }
+
+      .brand-card.honey-crop video {
+        object-fit: cover;
+        object-position: center;
+        transform: scale(1.14);
+      }
+
+      .brand-card.honey-crop:hover video {
+        transform: scale(1.18);
+      }
+
+      .brand-card:hover::before,
+      .brand-card:hover::after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .intro-card {
+        width: min(100%, 860px);
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .intro-card h2 {
+        max-width: 820px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: clamp(22px, 2.45vw, 31px);
+        line-height: 1.14;
+        text-transform: none;
+        white-space: normal;
+        color: var(--rose-deep);
+      }
+
+      .studio-rhythm {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        width: min(100%, 980px);
+        margin: clamp(18px, 2.8vw, 30px) auto 0;
+        border: 1px solid var(--line);
+        background: rgba(196, 125, 138, 0.08);
+        overflow: visible;
+        padding: 10px;
+      }
+
+      @media (min-width: 961px) {
+        .studio-rhythm {
+          grid-template-columns: repeat(3, minmax(220px, 280px));
+          justify-content: center;
+        }
+      }
+
+      .studio-rhythm span {
+        position: relative;
+        display: grid;
+        min-width: 0;
+        min-height: 52px;
+        place-items: center;
+        border: 1px solid rgba(255, 248, 239, 0.16);
+        color: var(--rose-deep);
+        background: rgba(255, 248, 239, 0.42);
+        padding: 0 12px;
+        font-size: clamp(10px, 0.9vw, 12px);
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-align: center;
+        text-transform: uppercase;
+        transition: transform 420ms ease, background 420ms ease, box-shadow 420ms ease, border-color 420ms ease;
+        animation: rhythmFloat 18s ease-in-out infinite;
+      }
+
+      .studio-rhythm span:nth-child(2),
+      .studio-rhythm span:nth-child(5) {
+        animation-delay: -4s;
+      }
+
+      .studio-rhythm span:nth-child(3),
+      .studio-rhythm span:nth-child(6) {
+        animation-delay: -8s;
+      }
+
+      .studio-rhythm span::after {
+        position: absolute;
+        right: 26%;
+        bottom: 12px;
+        left: 26%;
+        height: 1px;
+        background: var(--rose-deep);
+        content: "";
+        opacity: 0;
+        transform: scaleX(0);
+        transition: opacity 420ms ease, transform 420ms ease;
+      }
+
+      .studio-rhythm span:hover {
+        border-color: rgba(185, 111, 125, 0.52);
+        background: rgba(196, 125, 138, 0.12);
+        box-shadow: 0 0 28px rgba(255, 248, 239, 0.12);
+        transform: translateY(-4px);
+      }
+
+      .studio-rhythm span:hover::after {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+
+      .floral-divider {
+        position: relative;
+        width: min(100%, 640px);
+        height: 78px;
+        margin: clamp(18px, 3vw, 34px) auto 0;
+        opacity: 0.88;
+        overflow: visible;
+      }
+
+      .floral-divider::before,
+      .floral-divider::after {
+        position: absolute;
+        top: 50%;
+        width: calc(50% - 82px);
+        height: 1px;
+        background: rgba(255, 248, 239, 0.42);
+        content: "";
+        transform: translateY(-50%);
+      }
+
+      .floral-divider::before {
+        left: 0;
+      }
+
+      .floral-divider::after {
+        right: 0;
+      }
+
+      .floral-divider span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 124px;
+        height: 70px;
+        transform: translate(-50%, -50%);
+        background:
+          radial-gradient(ellipse at 46px 31px, #fff8ef 0 9px, transparent 10px),
+          radial-gradient(ellipse at 59px 27px, #f4c3cc 0 10px, transparent 11px),
+          radial-gradient(ellipse at 72px 34px, #fff0eb 0 9px, transparent 10px),
+          radial-gradient(circle at 60px 33px, #edc35c 0 2px, transparent 3px),
+          radial-gradient(ellipse at 91px 37px, #7c8644 0 7px, transparent 8px),
+          radial-gradient(ellipse at 99px 34px, #7c8644 0 4px, transparent 5px),
+          linear-gradient(105deg, transparent 0 51px, #7c8644 52px 54px, transparent 55px);
+        animation: dividerFlowerBreathe 8s ease-in-out infinite;
+      }
+
+      @keyframes dividerFlowerBreathe {
+        0%,
+        100% {
+          transform: translate(-50%, -50%) rotate(-1deg);
+        }
+
+        50% {
+          transform: translate(-50%, calc(-50% - 4px)) rotate(1deg);
+        }
+      }
+
+      @keyframes rhythmFloat {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+
+        50% {
+          transform: translateX(-10px);
+        }
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .services-section {
+        position: relative;
+      }
+
+      .services-section > .eyebrow,
+      #services-title {
+        text-align: center;
+      }
+
+      .service-card {
+        position: relative;
+        display: grid;
+        min-height: 220px;
+        align-content: space-between;
+        padding: clamp(18px, 2.3vw, 28px);
+        border: 1px solid var(--line);
+        background: rgba(196, 125, 138, 0.06);
+        transition: transform 420ms ease, border-color 420ms ease, box-shadow 420ms ease, background 420ms ease;
+      }
+
+      .service-card::before {
+        display: block;
+        margin-bottom: 18px;
+        color: var(--rose-deep);
+        content: attr(data-number);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+      }
+
+      .service-card:hover {
+        border-color: rgba(185, 111, 125, 0.48);
+        background: rgba(196, 125, 138, 0.1);
+        box-shadow: 0 22px 42px rgba(143, 37, 24, 0.12);
+        transform: translateY(-6px);
+      }
+
+      .service-card h3 {
+        margin-bottom: 10px;
+        font-size: clamp(20px, 2.1vw, 28px);
+      }
+
+      .service-card ul {
+        margin: 18px 0 0;
+        padding: 0;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        list-style: none;
+        text-transform: uppercase;
+      }
+
+      .service-card li {
+        padding: 8px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .rose-marquee {
+        overflow: hidden;
+        margin: clamp(18px, 3vw, 34px) auto 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: rgba(196, 125, 138, 0.08);
+      }
+
+      .rose-track {
+        display: flex;
+        width: max-content;
+        animation: tickerMove 32s linear infinite;
+      }
+
+      .rose-track span {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        padding: 13px 22px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      .rose-track span::before {
+        display: inline-block;
+        width: 42px;
+        height: 28px;
+        background:
+          radial-gradient(ellipse at 14px 15px, #fff8ef 0 6px, transparent 7px),
+          radial-gradient(ellipse at 24px 12px, #f4c3cc 0 7px, transparent 8px),
+          radial-gradient(ellipse at 31px 18px, #fff0eb 0 6px, transparent 7px),
+          radial-gradient(circle at 24px 15px, #edc35c 0 1.5px, transparent 2px),
+          radial-gradient(ellipse at 39px 20px, #7c8644 0 4px, transparent 5px),
+          linear-gradient(105deg, transparent 0 20px, #7c8644 21px 23px, transparent 24px);
+        content: "";
+      }
+
+      .experience-section {
+        padding-top: clamp(18px, 3vw, 34px);
+      }
+
+      .experience-head {
+        display: grid;
+        gap: 8px;
+        width: min(100%, 820px);
+        margin: 0 auto clamp(18px, 2.8vw, 30px);
+        text-align: center;
+      }
+
+      .experience-head h2 {
+        margin-bottom: 0;
+        white-space: normal;
+      }
+
+      .experience-timeline {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(200px, 1fr));
+        gap: 14px;
+        overflow-x: auto;
+        border: 0;
+        background: transparent;
+        scrollbar-width: thin;
+      }
+
+      .experience-step {
+        display: grid;
+        min-height: 210px;
+        align-content: start;
+        gap: 10px;
+        border: 1px solid var(--line);
+        background: rgba(196, 125, 138, 0.06);
+        padding: clamp(14px, 1.7vw, 20px);
+        transition: background 420ms ease, transform 420ms ease;
+      }
+
+      .experience-step:hover {
+        background: rgba(196, 125, 138, 0.1);
+        transform: translateY(-3px);
+      }
+
+      .experience-step .step-number {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      .experience-step h3 {
+        margin: 0;
+        font-size: clamp(14px, 1.2vw, 18px);
+        letter-spacing: 0.06em;
+        line-height: 1.18;
+        text-transform: uppercase;
+      }
+
+      .experience-step p {
+        margin: 0;
+      }
+
+      .experience-step ul {
+        display: grid;
+        gap: 7px;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        list-style: none;
+      }
+
+      .experience-step li {
+        padding-top: 0;
+      }
+
+      .contact {
+        display: block;
+      }
+
+      #contact-title,
+      #services-title {
+        max-width: 640px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      #contact-title {
+        font-size: clamp(24px, 2.5vw, 34px);
+        line-height: 1.16;
+        white-space: normal;
+      }
+
+      .contact-links {
+        display: grid;
+        justify-items: center;
+        gap: 10px;
+        margin-top: 16px;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      .contact-copy {
+        position: relative;
+        width: min(100%, 820px);
+        margin: 0 auto 24px;
+        text-align: center;
+      }
+
+      .contact-copy::after {
+        display: block;
+        width: 92px;
+        height: 30px;
+        margin: 20px auto 0;
+        background:
+          radial-gradient(ellipse at 28px 17px, #fff8ef 0 7px, transparent 8px),
+          radial-gradient(ellipse at 40px 14px, #f4c3cc 0 7px, transparent 8px),
+          radial-gradient(ellipse at 49px 20px, #fff0eb 0 6px, transparent 7px),
+          radial-gradient(ellipse at 67px 22px, #7c8644 0 5px, transparent 6px),
+          linear-gradient(104deg, transparent 0 28px, #7c8644 29px 31px, transparent 32px);
+        content: "";
+        opacity: 0.72;
+        animation: flowerBreathe 7s ease-in-out infinite;
+      }
+
+      @keyframes flowerBreathe {
+        0%,
+        100% {
+          transform: translateY(0) rotate(-1deg);
+        }
+
+        50% {
+          transform: translateY(-4px) rotate(1deg);
+        }
+      }
+
+      .enquiry-form {
+        display: grid;
+        width: min(100%, 900px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin: 0 auto;
+        padding: clamp(22px, 3vw, 34px);
+        border: 1px solid var(--line);
+        border-radius: 2px;
+        background: rgba(196, 125, 138, 0.06);
+        box-shadow: 0 18px 48px rgba(143, 37, 24, 0.08);
+      }
+
+      .form-intro,
+      .field-full {
+        grid-column: 1 / -1;
+      }
+
+      .form-intro {
+        display: grid;
+        gap: 4px;
+        margin-bottom: 4px;
+      }
+
+      .form-intro h3 {
+        color: var(--rose-deep);
+        margin: 0;
+        font-size: clamp(22px, 2.2vw, 30px);
+      }
+
+      .form-intro p {
+        color: var(--rose-deep);
+        margin: 0;
+      }
+
+      label {
+        display: grid;
+        gap: 7px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        border: 1px solid rgba(185, 111, 125, 0.38);
+        border-radius: 2px;
+        background-color: rgba(255, 248, 239, 0.72);
+        color: var(--rose-deep);
+        font-size: 16px;
+        font-weight: 300;
+        padding: 13px 14px;
+        transition: border-color 240ms ease, box-shadow 240ms ease, background 240ms ease;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: rgba(185, 111, 125, 0.72);
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: rgba(185, 52, 32, 0.5);
+        background-color: rgba(255, 248, 239, 0.94);
+        box-shadow: 0 0 0 2px rgba(185, 111, 125, 0.12);
+      }
+
+      select {
+        appearance: none;
+        background-image: linear-gradient(45deg, transparent 50%, var(--rose-deep) 50%),
+          linear-gradient(135deg, var(--rose-deep) 50%, transparent 50%);
+        background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%;
+        background-repeat: no-repeat;
+        background-size: 6px 6px, 6px 6px;
+      }
+
+      select option {
+        background: var(--cream);
+        color: var(--rose-deep);
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      .enquiry-form .button {
+        background: var(--cream);
+        color: var(--red);
+        border-color: var(--red);
+      }
+
+      .enquiry-form .button:hover {
+        background: rgba(185, 52, 32, 0.08);
+        border-color: var(--red-deep);
+        color: var(--red-deep);
+      }
+
+      .site-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 30px clamp(22px, 6vw, 78px);
+        border-top: 1px solid var(--line);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .stagger {
+        transition-delay: calc(var(--i, 0) * 90ms);
+      }
+
+      @media (max-width: 960px) {
+        .portfolio-head,
+        .contact,
+        .service-grid,
+        .portfolio-grid,
+        .branding-grid,
+        .studio-rhythm {
+          grid-template-columns: 1fr;
+        }
+
+        .work-project {
+          grid-column: auto;
+          grid-template-columns: 1fr;
+        }
+
+        .preview-frame iframe {
+          transform: scale(0.31);
+        }
+
+        .enquiry-form {
+          grid-template-columns: 1fr;
+        }
+
+        .brand-project,
+        .brand-pair {
+          grid-column: auto;
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .site-header {
+          gap: 18px;
+          grid-template-columns: 1fr;
+          padding: 20px 18px;
+        }
+
+        .top-nav {
+          justify-content: flex-start;
+          gap: 10px 16px;
+          font-size: 10px;
+          letter-spacing: 0.1em;
+        }
+
+        .hero-brand-logo {
+          width: min(100%, 360px);
+        }
+
+        h1 {
+          font-size: clamp(22px, 6.1vw, 30px);
+        }
+
+        h2 {
+          white-space: normal;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .preview-frame iframe {
+          transform: scale(0.25);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="mini-logo" href="#top" aria-label="Cedar and Wolf home">C&amp;W</a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#branding">Brand Identity</a>
+        <a href="#services">Packages</a>
+        <a href="#contact">Enquire</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner reveal">
+          <img
+            class="hero-brand-logo"
+            src="assets/website/cedar-and-wolf-floral-logo.png"
+            alt="Cedar &amp; Wolf brand identity and digital design studio"
+          />
+          <h1 id="hero-title">Brand Identity &amp; Digital Design Studio</h1>
+          <p class="hero-copy">
+            Cedar &amp; Wolf creates visual identities, editorial websites and digital brand systems for thoughtful founders
+            ready to look more soulful, memorable and trusted online.
+          </p>
+          <div class="button-row">
+            <a class="button" href="#contact">Start a Project</a>
+            <a class="button" href="#work">View the Work</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio section-shell reveal" id="work" aria-labelledby="work-title">
+        <div class="portfolio-head">
+          <p class="eyebrow">Selected work</p>
+          <div>
+            <h2 id="work-title">Selected Digital Work</h2>
+            <p>
+              A collection of editorial, conversion-conscious websites designed to help businesses feel more polished,
+              trusted and easy to understand online.
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="work-project stagger" style="--i: 0">
+            <div class="preview-frame">
+              <iframe src="https://flowthecaliway.netlify.app/" title="Flow the Cali Way website preview" loading="lazy"></iframe>
+            </div>
+            <div class="brand-card crop-tight" data-label="Flow Identity">
+              <img src="assets/portfolio-branding/flow-identity.png" alt="Flow the Cali Way beach lifestyle branding design" />
+            </div>
+            <div class="work-meta">
+              <a href="https://flowthecaliway.netlify.app/" target="_blank" rel="noreferrer">View</a>
+            </div>
+          </article>
+          <article class="work-card stagger" style="--i: 1">
+            <div class="preview-frame">
+              <iframe src="https://lunanailstudios.netlify.app/" title="Luna Nail Studios website preview" loading="lazy"></iframe>
+            </div>
+            <div class="work-meta">
+              <a href="https://lunanailstudios.netlify.app/" target="_blank" rel="noreferrer">View</a>
+            </div>
+          </article>
+          <article class="work-card stagger" style="--i: 2">
+            <div class="preview-frame">
+              <iframe src="https://auraandfletcher.netlify.app/" title="Aura and Fletcher website preview" loading="lazy"></iframe>
+            </div>
+            <div class="work-meta">
+              <a href="https://auraandfletcher.netlify.app/" target="_blank" rel="noreferrer">View</a>
+            </div>
+          </article>
+          <article class="work-card stagger" style="--i: 3">
+            <div class="preview-frame">
+              <iframe src="https://glosshause.netlify.app" title="Gloss Hause updated website preview" loading="lazy"></iframe>
+            </div>
+            <div class="work-meta">
+              <a href="https://glosshause.netlify.app" target="_blank" rel="noreferrer">View</a>
+            </div>
+          </article>
+          <article class="work-card stagger" style="--i: 4">
+            <div class="preview-frame">
+              <iframe src="https://stackandember.netlify.app/" title="Stack and Ember website preview" loading="lazy"></iframe>
+            </div>
+            <div class="work-meta">
+              <a href="https://stackandember.netlify.app/" target="_blank" rel="noreferrer">View</a>
+            </div>
+          </article>
+          <article class="work-card stagger" style="--i: 5">
+            <div class="preview-frame">
+              <iframe src="https://kuroandsalt.netlify.app/" title="Kuro and Salt website preview" loading="lazy"></iframe>
+            </div>
+            <div class="work-meta">
+              <a href="https://kuroandsalt.netlify.app/" target="_blank" rel="noreferrer">View</a>
+            </div>
+          </article>
+          <article class="work-card stagger" style="--i: 6">
+            <div class="preview-frame">
+              <iframe src="https://maisonvelarestaurant.netlify.app/" title="Maison Vela restaurant website preview" loading="lazy"></iframe>
+            </div>
+            <div class="work-meta">
+              <a href="https://maisonvelarestaurant.netlify.app/" target="_blank" rel="noreferrer">View</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="portfolio-head" id="branding">
+          <p class="eyebrow">Brand identity</p>
+          <div>
+            <h2>Selected Brand Identity Work</h2>
+            <p>
+              Visual identity concepts exploring logo systems, typography, colour, mood and brand feeling across lifestyle,
+              food, beauty and hospitality brands.
+            </p>
+          </div>
+        </div>
+
+        <div class="branding-grid">
+          <article class="brand-project stagger" style="--i: 0">
+            <h3 class="brand-project-title">Brew Coffee Identity</h3>
+            <div class="brand-pair">
+              <div class="brand-card brew-crop" data-label="Brew Identity">
+                <img src="assets/portfolio-branding/brew-logo.png" alt="Brew coffee branding design" />
+              </div>
+              <div class="brand-card identity-board moodboard-crop" data-label="Brew Moodboard">
+                <img src="assets/portfolio-branding/brew-identity-board.png" alt="Brew editorial roast moodboard and identity system" />
+              </div>
+            </div>
+          </article>
+          <article class="brand-card sippy-crop stagger" data-label="Sippy Identity" style="--i: 2">
+            <img src="assets/portfolio-branding/sippy-logo.png" alt="Sippy cafe branding design" />
+          </article>
+          <article class="brand-card honey-crop stagger" data-label="Honey Cosmetics Identity" style="--i: 3">
+            <video
+              src="assets/portfolio-branding/honey-cosmetics.mp4"
+              aria-label="Honey Cosmetics animated branding design"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+          </article>
+          <article class="brand-card stagger" data-label="Matcha by Paola Identity" style="--i: 4">
+            <img src="assets/portfolio-branding/matcha-by-paola.png" alt="Matcha by Paola branding design" />
+          </article>
+          <article class="brand-card stagger" data-label="Fresh Nails Identity" style="--i: 5">
+            <img src="assets/portfolio-branding/fresh-nails-branding.png" alt="Fresh Nails branding design" />
+          </article>
+          <article class="brand-card stagger" data-label="Celestine Bar Identity" style="--i: 6">
+            <img src="assets/portfolio-branding/celestine-bar-branding.png" alt="Celestine Bar branding design" />
+          </article>
+          <article class="brand-card stagger" data-label="Remedy Identity" style="--i: 7">
+            <img src="assets/portfolio-branding/remedy-beach-club.png" alt="Remedy beach club logo design" />
+          </article>
+          <article class="brand-card stagger" data-label="La Piscina Identity" style="--i: 8">
+            <img src="assets/portfolio-branding/la-piscina-branding.png" alt="La Piscina restaurant branding design" />
+          </article>
+          <article class="brand-card stagger" data-label="Define Identity" style="--i: 9">
+            <img src="assets/portfolio-branding/define-surf-brand.png" alt="Define surf brand design" />
+          </article>
+          <article class="brand-card stagger" data-label="Velocity Identity" style="--i: 10">
+            <img src="assets/portfolio-branding/velocity-logo.png" alt="Velocity monogram branding design" />
+          </article>
+          <article class="brand-card stagger" data-label="Blue City Identity" style="--i: 11">
+            <img src="assets/portfolio-branding/blue-city-logo.png" alt="Blue City tattoo studio branding design" />
+          </article>
+          <article class="brand-card crop-tight stagger" data-label="Smashd Identity" style="--i: 12">
+            <img src="assets/portfolio-branding/smashd-branding.png" alt="Smashd food branding design" />
+          </article>
+          <article class="brand-card stagger" data-label="Mae Smith Identity" style="--i: 13">
+            <img src="assets/portfolio-branding/mae-smith-identity.png" alt="Mae Smith poster-style identity design" />
+          </article>
+          <article class="brand-card stagger" data-label="Vince's Pizza Identity" style="--i: 14">
+            <img src="assets/portfolio-branding/vinces-pizza-identity.png" alt="Vince's Pizza branding design" />
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell reveal">
+        <div class="intro-card">
+          <p class="eyebrow">Cedar &amp; Wolf</p>
+          <h2>Visual identities and digital spaces with atmosphere, clarity, and intention.</h2>
+          <p>
+            Whether you are launching, evolving, or refining the way your business is seen, the studio shapes the
+            strategy, story and design details that help your brand feel considered, cohesive, and ready to grow.
+          </p>
+        </div>
+        <div class="studio-rhythm" aria-label="Cedar and Wolf studio rhythm">
+          <span>Creative Direction</span>
+          <span>Visual Identity</span>
+          <span>Digital Presence</span>
+        </div>
+        <div class="floral-divider" aria-hidden="true"><span></span></div>
+      </section>
+
+      <section class="section-shell services-section reveal" id="services" aria-labelledby="services-title">
+        <p class="eyebrow">Studio services</p>
+        <h2 id="services-title">Ways to Work Together</h2>
+        <div class="service-grid">
+          <article class="service-card stagger" data-number="01" style="--i: 0">
+            <div>
+              <h3>Brand Foundations</h3>
+              <p>For new or growing businesses ready to build a clear, elevated visual identity.</p>
+            </div>
+            <ul>
+              <li>Creative direction</li>
+              <li>Moodboard + visual direction</li>
+              <li>Colour palette</li>
+              <li>Typography system</li>
+            </ul>
+          </article>
+          <article class="service-card stagger" data-number="02" style="--i: 1">
+            <div>
+              <h3>Brand + Website</h3>
+              <p>For founders who need a complete visual identity and online presence.</p>
+            </div>
+            <ul>
+              <li>Brand identity system</li>
+              <li>Editorial web design</li>
+              <li>Digital brand assets</li>
+              <li>Launch polish</li>
+            </ul>
+          </article>
+          <article class="service-card stagger" data-number="03" style="--i: 2">
+            <div>
+              <h3>Studio Partnership</h3>
+              <p>For businesses needing ongoing creative support after launch.</p>
+            </div>
+            <ul>
+              <li>Social media assets</li>
+              <li>Website updates</li>
+              <li>Campaign visuals</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <div class="rose-marquee" aria-hidden="true">
+        <div class="rose-track">
+          <span>&middot;</span><span>&middot;</span><span>&middot;</span><span>&middot;</span><span>&middot;</span>
+          <span>&middot;</span><span>&middot;</span><span>&middot;</span><span>&middot;</span><span>&middot;</span>
+          <span>&middot;</span><span>&middot;</span><span>&middot;</span><span>&middot;</span><span>&middot;</span>
+          <span>&middot;</span><span>&middot;</span><span>&middot;</span><span>&middot;</span><span>&middot;</span>
+          <span>&middot;</span><span>&middot;</span><span>&middot;</span><span>&middot;</span><span>&middot;</span>
+          <span>&middot;</span><span>&middot;</span><span>&middot;</span><span>&middot;</span><span>&middot;</span>
+          <span>&middot;</span><span>&middot;</span><span>&middot;</span><span>&middot;</span><span>&middot;</span>
+          <span>&middot;</span><span>&middot;</span><span>&middot;</span><span>&middot;</span><span>&middot;</span>
+        </div>
+      </div>
+
+      <section class="section-shell experience-section reveal" aria-labelledby="experience-title">
+        <div class="experience-head">
+          <p class="eyebrow">Studio process</p>
+          <h2 id="experience-title">Inside A Cedar &amp; Wolf Brand Experience</h2>
+        </div>
+        <div class="experience-timeline" aria-label="Cedar and Wolf brand experience timeline">
+          <article class="experience-step stagger" style="--i: 0">
+            <span class="step-number">01 — Discovery</span>
+            <h3>Discovery</h3>
+            <p>Every project begins with understanding your business, audience, goals and vision.</p>
+          </article>
+          <article class="experience-step stagger" style="--i: 1">
+            <span class="step-number">02 — Creative Direction</span>
+            <h3>Creative Direction</h3>
+            <p>We explore the mood, feeling, visual references and creative opportunities for your brand.</p>
+          </article>
+          <article class="experience-step stagger" style="--i: 2">
+            <span class="step-number">03 — Brand Presentation</span>
+            <h3>Brand Presentation</h3>
+            <p>You’ll receive a bespoke Cedar &amp; Wolf brand deck which may include:</p>
+            <ul>
+              <li>Brand Vision</li>
+              <li>Mood Board</li>
+              <li>Colour Palette</li>
+              <li>Typography Direction</li>
+              <li>Logo Concepts</li>
+              <li>Brand Assets</li>
+              <li>Website Direction</li>
+            </ul>
+          </article>
+          <article class="experience-step stagger" style="--i: 3">
+            <span class="step-number">04 — Refinement</span>
+            <h3>Refinement</h3>
+            <p>Together we refine the chosen direction into a cohesive visual identity.</p>
+          </article>
+          <article class="experience-step stagger" style="--i: 4">
+            <span class="step-number">05 — Launch</span>
+            <h3>Launch</h3>
+            <p>Final assets are delivered and your brand is prepared for launch across every touchpoint.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact section-shell reveal" id="contact" aria-labelledby="contact-title">
+        <div class="contact-copy">
+          <p class="eyebrow">RSVP</p>
+          <h2 id="contact-title">Tell me about the brand you’re building</h2>
+          <p>Share a little about your business, vision and goals. I’ll come back to you with the best next step.</p>
+          <div class="contact-links">
+            <a href="mailto:cedarandwolfstudio@gmail.com">cedarandwolfstudio@gmail.com</a>
+          </div>
+        </div>
+
+        <form class="enquiry-form reveal" action="mailto:cedarandwolfstudio@gmail.com" method="post" enctype="text/plain">
+          <div class="form-intro">
+            <h3>Project Enquiry</h3>
+            <p>A few thoughtful details are enough to begin.</p>
+          </div>
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            Business / Brand Name
+            <input type="text" name="business" autocomplete="organization" />
+          </label>
+          <label>
+            Instagram or Website
+            <input type="text" name="instagram_or_website" autocomplete="url" />
+          </label>
+          <label>
+            What are you interested in?
+            <select name="project_interest" required>
+              <option value="">Select an option</option>
+              <option>Brand Identity</option>
+              <option>Brand + Website</option>
+              <option>Website Refresh</option>
+              <option>Ongoing Design Support</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+          <label>
+            Estimated Investment
+            <select name="estimated_investment" required>
+              <option value="">Select an option</option>
+              <option>£500–£1,000</option>
+              <option>£1,000–£2,000</option>
+              <option>£2,000–£5,000</option>
+              <option>£5,000+</option>
+            </select>
+          </label>
+          <label class="field-full">
+            Tell me a little about your business and what you’re hoping to create or improve.
+            <textarea name="project_notes" rows="5" required></textarea>
+          </label>
+          <button class="button field-full" type="submit">Send Enquiry</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Cedar &amp; Wolf — Brand Identity &amp; Digital Design Studio</span>
+    </footer>
+    <script>
+      const revealItems = document.querySelectorAll(".reveal, .stagger");
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.14 }
+      );
+
+      revealItems.forEach((item) => revealObserver.observe(item));
+    </script>
+  </body>
+</html>

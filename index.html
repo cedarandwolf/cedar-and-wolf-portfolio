@@ -424,14 +424,19 @@
 
       .preview-frame iframe {
         position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
+        top: 0;
+        left: 0;
+        width: 320%;
+        height: 320%;
         border: 0;
         background: var(--cream);
         pointer-events: none;
-        transform: none;
+        transform: scale(0.3125);
         transform-origin: top left;
+      }
+
+      .maison-preview iframe {
+        top: -52px;
       }
 
       .preview-fallback {
@@ -1220,7 +1225,7 @@
         }
 
         .preview-frame iframe {
-          transform: none;
+          transform: scale(0.3125);
         }
       }
     </style>
@@ -1327,7 +1332,7 @@
             </div>
           </article>
           <article class="work-card stagger" style="--i: 6">
-            <div class="preview-frame">
+            <div class="preview-frame maison-preview">
               <iframe src="https://maisonvelarestaurant.netlify.app/" title="Maison Vela restaurant website preview" loading="lazy"></iframe>
               <a class="preview-fallback" href="https://maisonvelarestaurant.netlify.app/" target="_blank" rel="noreferrer">Maison Vela Website</a>
             </div>

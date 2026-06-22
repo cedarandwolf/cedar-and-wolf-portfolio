@@ -1169,37 +1169,13 @@
           grid-template-columns: 1fr;
         }
 
-        .preview-frame iframe {
-          transform: scale(0.31);
-        }
-
         .preview-frame {
-          aspect-ratio: auto;
-          min-height: 132px;
-          background: rgba(196, 125, 138, 0.12);
+          aspect-ratio: 1;
         }
 
         .preview-frame::before,
         .preview-frame::after {
           display: none;
-        }
-
-        .preview-frame iframe {
-          display: none;
-        }
-
-        .preview-fallback {
-          display: grid;
-          min-height: 132px;
-          place-items: center;
-          padding: 20px;
-          color: var(--rose-deep);
-          font-size: 12px;
-          font-weight: 700;
-          letter-spacing: 0.16em;
-          line-height: 1.5;
-          text-align: center;
-          text-transform: uppercase;
         }
 
         .enquiry-form {
@@ -1244,7 +1220,7 @@
         }
 
         .preview-frame iframe {
-          transform: scale(0.25);
+          transform: none;
         }
       }
     </style>

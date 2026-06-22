@@ -122,9 +122,9 @@
       .mini-logo {
         position: relative;
         z-index: 1;
-        color: var(--rose-deep);
+        color: rgba(255, 248, 239, 0.98);
         font-family: var(--sans);
-        font-size: clamp(32px, 4vw, 48px);
+        font-size: clamp(26px, 3.1vw, 38px);
         font-weight: 600;
         line-height: 1;
       }
@@ -136,6 +136,7 @@
         flex-wrap: wrap;
         justify-content: flex-end;
         gap: clamp(14px, 2.5vw, 30px);
+        color: rgba(255, 248, 239, 0.98);
         font-size: 12px;
         font-weight: 700;
         letter-spacing: 0.16em;
@@ -431,6 +432,10 @@
         transform-origin: top left;
       }
 
+      .preview-fallback {
+        display: none;
+      }
+
       .work-card:hover .preview-frame iframe,
       .work-project:hover .preview-frame iframe {
         pointer-events: auto;
@@ -483,7 +488,22 @@
         gap: 12px;
       }
 
+      .brand-pair .preview-frame {
+        aspect-ratio: 1;
+      }
+
+      .brand-pair .preview-frame::before {
+        display: none;
+      }
+
+      .brand-pair .preview-frame iframe {
+        width: 320%;
+        height: 320%;
+        transform: scale(0.3125);
+      }
+
       .brand-card {
+        display: block;
         position: relative;
         overflow: hidden;
         border: 0;
@@ -1151,6 +1171,35 @@
           transform: scale(0.31);
         }
 
+        .preview-frame {
+          aspect-ratio: auto;
+          min-height: 132px;
+          background: rgba(196, 125, 138, 0.12);
+        }
+
+        .preview-frame::before,
+        .preview-frame::after {
+          display: none;
+        }
+
+        .preview-frame iframe {
+          display: none;
+        }
+
+        .preview-fallback {
+          display: grid;
+          min-height: 132px;
+          place-items: center;
+          padding: 20px;
+          color: var(--rose-deep);
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 0.16em;
+          line-height: 1.5;
+          text-align: center;
+          text-transform: uppercase;
+        }
+
         .enquiry-form {
           grid-template-columns: 1fr;
         }
@@ -1245,6 +1294,7 @@
           <article class="work-project stagger" style="--i: 0">
             <div class="preview-frame">
               <iframe src="https://flowthecaliway.netlify.app/" title="Flow the Cali Way website preview" loading="lazy"></iframe>
+              <a class="preview-fallback" href="https://flowthecaliway.netlify.app/" target="_blank" rel="noreferrer">Flow the Cali Way Website</a>
             </div>
             <div class="brand-card crop-tight" data-label="Flow Identity">
               <img src="assets/portfolio-branding/flow-identity.png" alt="Flow the Cali Way beach lifestyle branding design" />
@@ -1254,48 +1304,59 @@
             </div>
           </article>
           <article class="work-card stagger" style="--i: 1">
+            <div class="brand-card" data-label="Blue City Identity">
+              <img src="assets/portfolio-branding/blue-city-logo.png" alt="Blue City tattoo studio branding design" />
+            </div>
+          </article>
+          <article class="work-card stagger" style="--i: 2">
             <div class="preview-frame">
               <iframe src="https://lunanailstudios.netlify.app/" title="Luna Nail Studios website preview" loading="lazy"></iframe>
+              <a class="preview-fallback" href="https://lunanailstudios.netlify.app/" target="_blank" rel="noreferrer">Luna Nail Studios Website</a>
             </div>
             <div class="work-meta">
               <a href="https://lunanailstudios.netlify.app/" target="_blank" rel="noreferrer">View</a>
             </div>
           </article>
-          <article class="work-card stagger" style="--i: 2">
+          <article class="work-card stagger" style="--i: 3">
             <div class="preview-frame">
               <iframe src="https://auraandfletcher.netlify.app/" title="Aura and Fletcher website preview" loading="lazy"></iframe>
+              <a class="preview-fallback" href="https://auraandfletcher.netlify.app/" target="_blank" rel="noreferrer">Aura and Fletcher Website</a>
             </div>
             <div class="work-meta">
               <a href="https://auraandfletcher.netlify.app/" target="_blank" rel="noreferrer">View</a>
             </div>
           </article>
-          <article class="work-card stagger" style="--i: 3">
+          <article class="work-card stagger" style="--i: 4">
             <div class="preview-frame">
               <iframe src="https://glosshause.netlify.app" title="Gloss Hause updated website preview" loading="lazy"></iframe>
+              <a class="preview-fallback" href="https://glosshause.netlify.app" target="_blank" rel="noreferrer">Gloss Hause Website</a>
             </div>
             <div class="work-meta">
               <a href="https://glosshause.netlify.app" target="_blank" rel="noreferrer">View</a>
             </div>
           </article>
-          <article class="work-card stagger" style="--i: 4">
+          <article class="work-card stagger" style="--i: 5">
             <div class="preview-frame">
               <iframe src="https://stackandember.netlify.app/" title="Stack and Ember website preview" loading="lazy"></iframe>
+              <a class="preview-fallback" href="https://stackandember.netlify.app/" target="_blank" rel="noreferrer">Stack and Ember Website</a>
             </div>
             <div class="work-meta">
               <a href="https://stackandember.netlify.app/" target="_blank" rel="noreferrer">View</a>
             </div>
           </article>
-          <article class="work-card stagger" style="--i: 5">
+          <article class="work-card stagger" style="--i: 6">
             <div class="preview-frame">
               <iframe src="https://kuroandsalt.netlify.app/" title="Kuro and Salt website preview" loading="lazy"></iframe>
+              <a class="preview-fallback" href="https://kuroandsalt.netlify.app/" target="_blank" rel="noreferrer">Kuro and Salt Website</a>
             </div>
             <div class="work-meta">
               <a href="https://kuroandsalt.netlify.app/" target="_blank" rel="noreferrer">View</a>
             </div>
           </article>
-          <article class="work-card stagger" style="--i: 6">
+          <article class="work-card stagger" style="--i: 7">
             <div class="preview-frame">
               <iframe src="https://maisonvelarestaurant.netlify.app/" title="Maison Vela restaurant website preview" loading="lazy"></iframe>
+              <a class="preview-fallback" href="https://maisonvelarestaurant.netlify.app/" target="_blank" rel="noreferrer">Maison Vela Website</a>
             </div>
             <div class="work-meta">
               <a href="https://maisonvelarestaurant.netlify.app/" target="_blank" rel="noreferrer">View</a>
@@ -1326,18 +1387,19 @@
               </div>
             </div>
           </article>
+          <article class="brand-project stagger" style="--i: 1">
+            <h3 class="brand-project-title">Homey Furniture Identity</h3>
+            <div class="brand-pair">
+              <a class="brand-card full-art" data-label="Homey Logo" href="assets/portfolio-branding/homey-logo.png" target="_blank" rel="noreferrer">
+                <img src="assets/portfolio-branding/homey-logo.png" alt="Homey furniture brand logo design" />
+              </a>
+              <a class="brand-card identity-board moodboard-crop" data-label="Homey Brand Idea" href="homey-brand-idea.html" target="_blank" rel="noreferrer">
+                <img src="assets/portfolio-branding/homey-material-furniture.png" alt="Homey furniture identity board with material palette and furniture direction" />
+              </a>
+            </div>
+          </article>
           <article class="brand-card sippy-crop stagger" data-label="Sippy Identity" style="--i: 2">
             <img src="assets/portfolio-branding/sippy-logo.png" alt="Sippy cafe branding design" />
-          </article>
-          <article class="brand-card honey-crop stagger" data-label="Honey Cosmetics Identity" style="--i: 3">
-            <video
-              src="assets/portfolio-branding/honey-cosmetics.mp4"
-              aria-label="Honey Cosmetics animated branding design"
-              autoplay
-              muted
-              loop
-              playsinline
-            ></video>
           </article>
           <article class="brand-card stagger" data-label="Matcha by Paola Identity" style="--i: 4">
             <img src="assets/portfolio-branding/matcha-by-paola.png" alt="Matcha by Paola branding design" />
@@ -1359,9 +1421,6 @@
           </article>
           <article class="brand-card stagger" data-label="Velocity Identity" style="--i: 10">
             <img src="assets/portfolio-branding/velocity-logo.png" alt="Velocity monogram branding design" />
-          </article>
-          <article class="brand-card stagger" data-label="Blue City Identity" style="--i: 11">
-            <img src="assets/portfolio-branding/blue-city-logo.png" alt="Blue City tattoo studio branding design" />
           </article>
           <article class="brand-card crop-tight stagger" data-label="Smashd Identity" style="--i: 12">
             <img src="assets/portfolio-branding/smashd-branding.png" alt="Smashd food branding design" />
@@ -1496,11 +1555,11 @@
           <h2 id="contact-title">Tell me about the brand you’re building</h2>
           <p>Share a little about your business, vision and goals. I’ll come back to you with the best next step.</p>
           <div class="contact-links">
-            <a href="mailto:cedarandwolfstudio@gmail.com">cedarandwolfstudio@gmail.com</a>
+            <a href="mailto:cedarandwolfstudios@gmail.com">cedarandwolfstudios@gmail.com</a>
           </div>
         </div>
 
-        <form class="enquiry-form reveal" action="mailto:cedarandwolfstudio@gmail.com" method="post" enctype="text/plain">
+        <form class="enquiry-form reveal" action="mailto:cedarandwolfstudios@gmail.com" method="post" enctype="text/plain">
           <div class="form-intro">
             <h3>Project Enquiry</h3>
             <p>A few thoughtful details are enough to begin.</p>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Homey Brand Identity</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f8f1e2;
+        --ink: #3e2d29;
+        --line: rgba(62, 45, 41, 0.16);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      main {
+        width: min(1080px, 100%);
+        margin: 0 auto;
+        padding: 32px 24px 56px;
+      }
+
+      header {
+        display: grid;
+        gap: 14px;
+        margin-bottom: 28px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 26px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin: 0;
+        font-size: 14px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .logo {
+        width: min(720px, 100%);
+        display: block;
+      }
+
+      .stack {
+        display: grid;
+        gap: 20px;
+      }
+
+      figure {
+        margin: 0;
+        padding: 14px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.36);
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img class="logo" src="assets/portfolio-branding/homey-logo.png" alt="Homey furniture logo" />
+        <p>Type system, materials, brand applications and campaign showcase.</p>
+      </header>
+
+      <section class="stack">
+        <figure>
+          <img src="assets/portfolio-branding/homey-type-system.png" alt="Homey type system board" />
+        </figure>
+        <figure>
+          <img src="assets/portfolio-branding/homey-material-furniture.png" alt="Homey material and furniture direction board" />
+        </figure>
+        <figure>
+          <img src="assets/portfolio-branding/homey-brand-applications.png" alt="Homey brand applications board" />
+        </figure>
+        <figure>
+          <img src="assets/portfolio-branding/homey-campaign-showcase.png" alt="Homey campaign showcase board" />
+        </figure>
+      </section>
+    </main>
+  </body>
+</html>

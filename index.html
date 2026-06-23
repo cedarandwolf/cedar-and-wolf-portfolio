@@ -425,18 +425,19 @@
       .preview-frame iframe {
         position: absolute;
         top: 0;
-        left: 0;
-        width: 320%;
-        height: 320%;
+        left: 50%;
+        width: 260%;
+        height: 170%;
         border: 0;
         background: var(--cream);
         pointer-events: none;
-        transform: scale(0.3125);
-        transform-origin: top left;
+        transform: translateX(-50%) scale(0.6);
+        transform-origin: top center;
       }
 
       .maison-preview iframe {
-        top: -52px;
+        top: -76px;
+        height: 230%;
       }
 
       .preview-fallback {
@@ -1225,7 +1226,7 @@
         }
 
         .preview-frame iframe {
-          transform: scale(0.3125);
+          transform: translateX(-50%) scale(0.6);
         }
       }
     </style>

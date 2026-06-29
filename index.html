@@ -237,14 +237,20 @@
 
       .reveal,
       .stagger {
-        opacity: 0;
-        transform: translateY(22px);
+        opacity: 1;
+        transform: translateY(0);
         transition: opacity 900ms ease, transform 900ms ease, filter 420ms ease, border-color 420ms ease,
           box-shadow 420ms ease, background 420ms ease;
       }
 
-      .reveal.is-visible,
-      .stagger.is-visible {
+      .js-enabled .reveal,
+      .js-enabled .stagger {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+
+      .js-enabled .reveal.is-visible,
+      .js-enabled .stagger.is-visible {
         opacity: 1;
         transform: translateY(0);
       }
@@ -1585,20 +1591,29 @@
       <span>Cedar &amp; Wolf — Brand Identity &amp; Digital Design Studio</span>
     </footer>
     <script>
+      document.documentElement.classList.add("js-enabled");
       const revealItems = document.querySelectorAll(".reveal, .stagger");
-      const revealObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              revealObserver.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.14 }
-      );
 
-      revealItems.forEach((item) => revealObserver.observe(item));
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.14 }
+        );
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+        window.setTimeout(() => {
+          revealItems.forEach((item) => item.classList.add("is-visible"));
+        }, 1200);
+      } else {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
+      }
     </script>
   </body>
 </html>

@@ -485,23 +485,6 @@ body.is-loaded [data-load-reveal] { opacity: 1; transform: translateY(0); }
 
 .project:hover .project__visual iframe { transform: scale(0.42); }
 
-.project__live {
-  position: absolute;
-  top: 0.9rem;
-  left: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-size: 0.55rem;
-  color: var(--ink);
-  background: rgba(11, 10, 8, 0.7);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid var(--line);
-  border-radius: 100px;
-  padding: 0.35rem 0.75rem;
-}
-
 .project__info { margin-top: 1.2rem; display: flex; flex-direction: column; gap: 0.35rem; }
 
 .project__info h3 {

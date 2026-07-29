@@ -291,11 +291,11 @@ body.is-loaded [data-load-reveal] { opacity: 1; transform: translateY(0); }
 /* ---------- Hero ---------- */
 
 .hero {
-  min-height: clamp(620px, 88svh, 900px);
+  min-height: clamp(500px, 70svh, 760px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 6rem var(--pad) 3rem;
+  padding: 5.25rem var(--pad) 2.75rem;
   position: relative;
   overflow: hidden;
 }
@@ -393,6 +393,11 @@ body.is-loaded [data-load-reveal] { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 700px) {
+  .hero {
+    min-height: clamp(500px, 72svh, 660px);
+    padding-top: 5rem;
+  }
+
   .hero__bottom { flex-direction: column; align-items: flex-start; }
 }
 
@@ -447,13 +452,31 @@ body.is-loaded [data-load-reveal] { opacity: 1; transform: translateY(0); }
   aspect-ratio: 16 / 10;
   border-radius: 4px;
   border: 1px solid var(--line);
-  overflow: hidden;
+  overflow: auto;
   position: relative;
   background: var(--bg-raised);
   transition: border-color 0.4s;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(232, 160, 170, 0.45) transparent;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 .project:hover .project__visual { border-color: rgba(232, 160, 170, 0.45); }
+
+.project__visual::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.project__visual::-webkit-scrollbar-track { background: transparent; }
+
+.project__visual::-webkit-scrollbar-thumb {
+  background: rgba(232, 160, 170, 0.45);
+  border-radius: 999px;
+}
+
+.project__visual::-webkit-scrollbar-corner { background: transparent; }
 
 .project__visual iframe {
   width: 200%;
@@ -463,10 +486,10 @@ body.is-loaded [data-load-reveal] { opacity: 1; transform: translateY(0); }
   transform-origin: 0 0;
   pointer-events: none;
   background: var(--bg-raised);
-  transition: transform 0.8s var(--ease-out);
+  transition: none;
 }
 
-.project:hover .project__visual iframe { transform: scale(0.42); }
+.project:hover .project__visual iframe { transform: scale(0.5); }
 
 .project__info { margin-top: 1.2rem; display: flex; flex-direction: column; gap: 0.35rem; }
 

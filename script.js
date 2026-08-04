@@ -2,6 +2,27 @@
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+/* ---------- Enquiry form feedback ---------- */
+(() => {
+  const form = document.getElementById("enquiry-form");
+  const status = document.getElementById("form-status");
+  if (!form || !status) return;
+
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("enquiry") === "sent") {
+    status.hidden = false;
+    status.classList.add("is-visible");
+    window.history.replaceState({}, "", `${window.location.pathname}#enquire`);
+  }
+
+  form.addEventListener("submit", () => {
+    const button = form.querySelector("button[type='submit']");
+    if (!button) return;
+    button.disabled = true;
+    button.innerHTML = "Sending Enquiry&hellip;";
+  });
+})();
+
 /* ---------- Load-in ---------- */
 (() => {
   // Trigger entrance animations on the next frame so transitions run.

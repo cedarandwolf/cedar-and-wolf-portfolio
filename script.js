@@ -8,18 +8,44 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matc
   const status = document.getElementById("form-status");
   if (!form || !status) return;
 
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("enquiry") === "sent") {
-    status.hidden = false;
-    status.classList.add("is-visible");
-    window.history.replaceState({}, "", `${window.location.pathname}#enquire`);
-  }
+  const button = form.querySelector("button[type='submit']");
+  const originalButton = button?.innerHTML;
 
-  form.addEventListener("submit", () => {
-    const button = form.querySelector("button[type='submit']");
-    if (!button) return;
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!button || button.disabled) return;
+
     button.disabled = true;
     button.innerHTML = "Sending Enquiry&hellip;";
+    status.hidden = true;
+    status.classList.remove("is-visible");
+
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 15000);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/cedarandwolfstudios@gmail.com", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form),
+        signal: controller.signal,
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || result.success === "false" || result.success === false) {
+        throw new Error("Submission was not accepted");
+      }
+
+      form.reset();
+      status.textContent = "Thank you. Your enquiry has been sent and I'll be in touch soon.";
+    } catch (error) {
+      status.innerHTML = 'The form could not send just now. Please email <a href="mailto:cedarandwolfstudios@gmail.com">cedarandwolfstudios@gmail.com</a> or <a href="mailto:tamaramaekhan@gmail.com">tamaramaekhan@gmail.com</a>.';
+    } finally {
+      window.clearTimeout(timeout);
+      status.hidden = false;
+      status.classList.add("is-visible");
+      button.disabled = false;
+      button.innerHTML = originalButton;
+    }
   });
 })();
 

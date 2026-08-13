@@ -92,7 +92,7 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matc
 (() => {
   // Stagger siblings inside list-like groups, then drop the delay after the
   // entrance so it never slows down hover transitions.
-  document.querySelectorAll(".work__grid, .identity__grid, .packages__grid, .process__list, .manifesto__foot").forEach((group) => {
+  document.querySelectorAll(".work__grid, .identity__grid, .services__list, .packages__grid, .process__list, .manifesto__foot").forEach((group) => {
     [...group.children].forEach((el, i) => {
       if (el.classList.contains("reveal")) el.style.transitionDelay = `${(i % 6) * 0.09}s`;
     });

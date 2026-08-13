@@ -329,7 +329,7 @@ body.is-loaded [data-load-reveal] { opacity: 1; transform: translateY(0); }
 .hero__title {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(2.4rem, 8vw, 7.25rem);
+  font-size: clamp(2.4rem, 6vw, 5.4rem);
   line-height: 0.95;
   letter-spacing: -0.025em;
   text-transform: uppercase;
@@ -514,11 +514,123 @@ body.is-loaded [data-load-reveal] { opacity: 1; transform: translateY(0); }
 
 .tile:hover img { transform: scale(1.04); }
 
+.tile--captioned figcaption {
+  padding: 1rem 1.1rem 1.15rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.tile--captioned figcaption span,
+.tile--captioned figcaption small {
+  display: block;
+}
+
+.tile--captioned figcaption small {
+  margin-top: 0.35rem;
+  color: var(--ink-dim);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.tile--menu img {
+  aspect-ratio: 612 / 1008;
+  object-fit: cover;
+  object-position: top;
+}
+
+#testimonial { scroll-margin-top: 5rem; }
+
 /* transparent artwork (e.g. the fluffy Homey wordmark) sits on the dark tile */
 .tile--transparent {
   padding: clamp(1.5rem, 3vw, 2.5rem);
   display: flex;
   align-items: center;
+}
+
+/* ---------- Services ---------- */
+
+.services.section {
+  padding-top: clamp(3.5rem, 7vw, 6rem);
+  padding-bottom: clamp(3.5rem, 7vw, 6rem);
+}
+
+.services__heading,
+.testimonial__heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: clamp(1.75rem, 4vw, 3rem);
+}
+
+.services__list {
+  max-width: 70rem;
+  border-top: 1px solid var(--line);
+}
+
+.service {
+  border-bottom: 1px solid var(--line);
+}
+
+.service summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: clamp(1.15rem, 2.5vw, 1.75rem) 0;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.2vw, 1.65rem);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.service summary::-webkit-details-marker { display: none; }
+
+.service__plus {
+  color: var(--accent);
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: transform 0.35s var(--ease-out);
+}
+
+.service[open] .service__plus { transform: rotate(45deg); }
+
+.service__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 5rem);
+  padding: 0 0 clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.service__content p {
+  max-width: 32rem;
+  color: var(--ink-dim);
+  font-size: 0.95rem;
+}
+
+.service__content ul { list-style: none; }
+
+.service__content li {
+  border-top: 1px solid var(--line);
+  padding: 0.55rem 0;
+  font-size: 0.9rem;
+}
+
+.service__content li::before {
+  content: "—";
+  color: var(--accent);
+  margin-right: 0.55rem;
+}
+
+@media (max-width: 700px) {
+  .service__content { grid-template-columns: 1fr; gap: 1rem; }
 }
 
 /* ---------- Manifesto ---------- */
@@ -635,6 +747,43 @@ body.is-loaded [data-load-reveal] { opacity: 1; transform: translateY(0); }
 }
 
 .package__cta:hover { color: var(--accent); letter-spacing: 0.2em; }
+
+/* ---------- Testimonial ---------- */
+
+.client-words.section {
+  padding-top: clamp(3.5rem, 7vw, 6rem);
+  padding-bottom: clamp(3.5rem, 7vw, 6rem);
+}
+
+.testimonial {
+  max-width: 62rem;
+  border-top: 1px solid var(--line);
+  padding-top: clamp(2rem, 4vw, 3.5rem);
+}
+
+.testimonial blockquote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.35rem, 2.4vw, 2.1rem);
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.testimonial blockquote::before { content: "“"; color: var(--accent); }
+.testimonial blockquote::after { content: "”"; color: var(--accent); }
+
+.testimonial figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.testimonial__name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.05rem;
+}
 
 /* ---------- Process ---------- */
 
